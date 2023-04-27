@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# first line sets up a new 404 error page
+# next redirects to a different address
+# sets up the server
+# run with sudo
+apt-get update
+apt-get install
+echo "Hello World!" > index.html
+mv index.html /var/www/html
+
+echo "Ceci n'est pas une page" > 404.html
+mv 404.html /var/www/html
+echo "server{
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=aY03yQXw3Bc;
+    }
+    error_page 404 /404.html;
+    location = /404.html{
+        internal;
+    }
+}" > default
+mv -f default /etc/nginx/sites-available/default
+service nginx restart
