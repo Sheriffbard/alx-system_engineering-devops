@@ -5,7 +5,7 @@ provided a personal server by ALX. I learned how to use `scp`
 and Fabric to transfer files to my server. Additionally, I completed a basic
 configuration of the server using Nginx.
 
-The server is accessible at [umjoji](http://umjoji.tech).
+The server link [sheriffbard ](http://yoruba.tech).
 
 ## Tasks :page_with_curl:
 
