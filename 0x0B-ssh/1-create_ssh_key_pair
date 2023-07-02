@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-#script that create a RSA key pair
+#script that create a RSA key pair saves in school folder, betty as passkey
 
 ssh-keygen -t rsa -b 4096 -N "betty" -f school
